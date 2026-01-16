@@ -1,48 +1,55 @@
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function () {
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Mobile Menu Toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            
-            // Toggle icon between menu and x
-            const icon = menuToggle.querySelector('svg');
-            // Re-render icon based on state (optional simple toggle logic)
-        });
-
-        // Close menu when clicking a link
-        document.querySelectorAll('#nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    }
-
-    // Intersection Observer for Scroll Animations
+    // Intersection Observer for Counters
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.5
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const counterObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                // Optional: Stop observing after animation
+                const $counter = $(entry.target);
+                const target = parseInt($counter.attr('data-target'));
+
+                // Animate
+                $({ countNum: 0 }).animate({
+                    countNum: target
+                },
+                    {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function () {
+                            $counter.text(Math.ceil(this.countNum));
+                        },
+                        complete: function () {
+                            $counter.text(this.countNum);
+                        }
+                    });
+
+                // Stop observing this element
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    const cards = document.querySelectorAll('.card');
-    cards.forEach((card, index) => {
-        // Add staggered delay via inline style
-        card.style.animationDelay = `${index * 100}ms`;
-        observer.observe(card);
+    // Attach observer to all .counter elements
+    $('.counter').each(function () {
+        counterObserver.observe(this);
+    });
+
+    // Smooth scrolling for navigation links
+    $("a.nav-link, .btn").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800);
+
+            // Close mobile menu if open
+            $('.navbar-collapse').collapse('hide');
+        }
     });
 });
