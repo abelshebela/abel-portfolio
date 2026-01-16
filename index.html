@@ -1,129 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Creative Developer</title>
-    <meta name="description" content="A high-performance portfolio for a creative developer, built with modern web standards.">
-    
+    <title>Abel Abebe - Full Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Abel Abebe, a Full-Stack Developer building high-performance digital products.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="glass">
-        <nav>
-            <div class="logo">DevPortfolio</div>
-            <button id="menu-toggle" aria-label="Toggle Menu">
-                <i data-lucide="menu"></i>
-            </button>
-            <ul id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Abel Abebe</div>
+                <button class="menu-btn" id="menu-toggle" aria-label="Toggle Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="bento-grid">
+    <main>
         <!-- Hero Section -->
-        <section id="hero" class="card glass span-2 hero-card">
-            <h1>Building Digital Experiences</h1>
-            <p>Full-stack developer focused on performance and design.</p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn primary">View Work</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
+        <section id="about">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Hi, I'm Abel. <br>I Build Digital Products.</h1>
+                        <p>A Full-Stack Developer passionate about building high-performance, accessible, and beautiful
+                            web experiences.</p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">View Projects</a>
+                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        </div>
+                    </div>
+                    <img src="profile.png" alt="Abel Abebe" class="profile-img">
+                </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="card glass">
-            <h2><i data-lucide="user"></i> About Me</h2>
-            <p>I craft high-performance websites and applications using modern technologies. Passionate about open source and clean architecture.</p>
-        </section>
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2>Selected Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <h3>E-Commerce Dashboard</h3>
+                        <p>A real-time analytics dashboard for online retailers. Features sales tracking, inventory
+                            management, and reporting tools.</p>
+                        <div class="project-meta">
+                            <a href="#"><i data-lucide="external-link" size="18"></i> Live Demo</a>
+                            <a href="#"><i data-lucide="github" size="18"></i> Source</a>
+                        </div>
+                    </article>
 
-        <!-- Stats / Quick Info -->
-        <section class="card glass highlight">
-            <h3>5+ Years</h3>
-            <p>Experience</p>
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <h3>Task Manager App</h3>
+                        <p>Collaborative project management tool with live updates. Organize teams, assign tasks, and
+                            track progress effortlessly.</p>
+                        <div class="project-meta">
+                            <a href="#"><i data-lucide="external-link" size="18"></i> Live Demo</a>
+                            <a href="#"><i data-lucide="github" size="18"></i> Source</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <h3>Finance Tracker</h3>
+                        <p>Personal finance visualization and budgeting application. Connect accounts and visualize
+                            spending habits.</p>
+                        <div class="project-meta">
+                            <a href="#"><i data-lucide="external-link" size="18"></i> Live Demo</a>
+                            <a href="#"><i data-lucide="github" size="18"></i> Source</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="card glass span-2">
-            <h2><i data-lucide="cpu"></i> Tech Stack</h2>
-            <ul class="tag-list">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Python</li>
-                <li>Git</li>
-                <li>AWS</li>
-            </ul>
+        <section id="skills">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <ul class="skills-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                    <li>Python/Django</li>
+                    <li>PostgreSQL</li>
+                    <li>AWS / Cloud</li>
+                    <li>Git & CI/CD</li>
+                    <li>UI/UX Design</li>
+                </ul>
+            </div>
         </section>
 
-        <!-- Projects Section - Project 1 -->
-        <article class="card glass project-card">
-            <div class="project-content">
-                <h3>E-Commerce Dashboard</h3>
-                <p>A real-time analytics dashboard for online retailers.</p>
-                <div class="project-links">
-                    <a href="#">Demo <i data-lucide="external-link" size="16"></i></a>
-                    <a href="#">Code <i data-lucide="github" size="16"></i></a>
-                </div>
-            </div>
-        </article>
-
-        <!-- Projects Section - Project 2 -->
-        <article class="card glass project-card">
-            <div class="project-content">
-                <h3>Task Manager App</h3>
-                <p>Collaborative project management tool with live updates.</p>
-                <div class="project-links">
-                    <a href="#">Demo <i data-lucide="external-link" size="16"></i></a>
-                    <a href="#">Code <i data-lucide="github" size="16"></i></a>
-                </div>
-            </div>
-        </article>
-
-         <!-- Projects Section - Project 3 -->
-         <article class="card glass project-card">
-            <div class="project-content">
-                <h3>Finance Tracker</h3>
-                <p>Personal finance visualization and budgeting application.</p>
-                <div class="project-links">
-                    <a href="#">Demo <i data-lucide="external-link" size="16"></i></a>
-                    <a href="#">Code <i data-lucide="github" size="16"></i></a>
-                </div>
-            </div>
-        </article>
-
         <!-- Contact Section -->
-        <section id="contact" class="card glass span-3 contact-card">
-            <h2>Get In Touch</h2>
-            <p>Have a project in mind? Let's talk.</p>
-            <a href="mailto:hello@example.com" class="btn primary">hello@example.com</a>
+        <section id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>Currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try
+                    my best to get back to you!</p>
+                <a href="mailto:hello@example.com" class="btn btn-primary">Say Hello</a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 DevPortfolio. Built with HTML, CSS, & JS.</p>
-        <div class="socials">
-            <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
-            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
-            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 Abel Abebe. Built with HTML & CSS.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
