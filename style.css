@@ -19,6 +19,14 @@ body {
     background-color: #010409;
 }
 
+/* Ensure image column has height on mobile */
+@media (max-width: 991px) {
+    .order-lg-2 {
+        min-height: 50vh;
+    }
+}
+
+
 /* Updated Image Styling for Boxed Layout */
 .hero-image-container img {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);

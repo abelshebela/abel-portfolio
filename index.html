@@ -41,7 +41,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Symmetrical Split) -->
+    <!-- Hero Section (Full Split) -->
     <section id="hero" class="min-vh-100 d-flex align-items-center position-relative overflow-hidden pt-5 pt-lg-0">
         <div class="container-fluid h-100 p-0">
             <div class="row g-0 h-100">
@@ -60,13 +60,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- Image Content (Right) -->
-                <div class="col-lg-6 d-flex align-items-center justify-content-center bg-darker order-1 order-lg-2">
-                    <div class="hero-image-container p-5" style="max-width: 650px;">
-                        <img src="profile.png" alt="Abel Abebe"
-                            class="img-fluid rounded-4 shadow-lg border border-secondary"
-                            style="width: 100%; box-shadow: 0 0 50px rgba(0,0,0,0.5);">
-                    </div>
+                <!-- Image Content (Right, Full Height) -->
+                <div
+                    class="col-lg-6 d-flex justify-content-center align-items-center bg-darker order-1 order-lg-2 p-0 position-relative">
+                    <!-- Absolute position ensures it fills the 100vh height from parent row -->
+                    <img src="profile.png" alt="Abel Abebe"
+                        class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
                 </div>
             </div>
         </div>
