@@ -27,7 +27,7 @@ body {
 }
 
 
-/* Updated Image Styling for Boxed Layout */
+/* Updated Image Styling for Boxed Layout with Responsive Radius */
 .hero-image-container img {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
@@ -35,6 +35,21 @@ body {
 
 .hero-image-container img:hover {
     transform: scale(1.02);
+}
+
+/* Responsive Hero Image Radius */
+.hero-img {
+    border-radius: 0;
+    /* Edge to edge on mobile */
+}
+
+@media (min-width: 992px) {
+    .hero-img {
+        border-radius: 2rem !important;
+        /* Rounded on desktop (rounded-5 equivalent) */
+        width: auto !important;
+        /* Reset width to auto on desktop within padding */
+    }
 }
 
 
