@@ -12,36 +12,23 @@ body {
 }
 
 /* Hero Section */
-.hero-img-col {
-    min-height: 50vh;
-}
-
-@media (min-width: 992px) {
-    .hero-img-col {
-        min-height: 100vh;
-    }
-}
+/* Removed full height constraints to allow content to dictate height on mobile, 
+   but maintained min-vh-100 on the section for desktop vertical centering */
 
 .bg-darker {
     background-color: #010409;
 }
 
-/* Gradient Overlay for Image */
-.overlay-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, #010409 0%, transparent 20%);
-    pointer-events: none;
+/* Updated Image Styling for Boxed Layout */
+.hero-image-container img {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
 }
 
-@media (max-width: 991px) {
-    .overlay-gradient {
-        background: linear-gradient(0deg, #010409 0%, transparent 20%);
-    }
+.hero-image-container img:hover {
+    transform: scale(1.02);
 }
+
 
 /* Stats */
 .bg-black {
